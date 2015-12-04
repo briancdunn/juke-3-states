@@ -1,8 +1,7 @@
-<div>
-  <h3>Albums</h3>
+<h4>ALBUMS</h4>
   <div class="row">
-    <div ng-repeat="album in albums" class="col-xs-4">
-      <a class="thumbnail" ui-sref="album({id: album._id})">
+    <div ng-repeat="album in artist.albums" class="col-xs-4">
+      <a class="thumbnail" ng-click="viewAlbum(album._id)" href="#">
         <img ng-src="{{ album.imageUrl }}">
         <div class="caption">
           <h5>
@@ -13,4 +12,3 @@
       </a>
     </div>
   </div>
-</div>
